@@ -110,11 +110,11 @@ export const InvitationDashboard: React.FC<InvitationDashboardProps> = ({ data }
 
             <div style={styles.detailsGrid}>
               <div style={styles.detailItem}>
-                <span style={styles.detailLabel}>ALMA MATER (TRƯỜNG)</span>
+                <span style={styles.detailLabel}>TRƯỜNG</span>
                 <span style={styles.detailVal}>{data.university}</span>
               </div>
               <div style={styles.detailItem}>
-                <span style={styles.detailLabel}>MAJOR (NGÀNH HỌC)</span>
+                <span style={styles.detailLabel}>NGÀNH</span>
                 <span style={styles.detailVal} className="glow-text-cyan">{data.major}</span>
               </div>
               <div style={styles.detailItem}>
@@ -125,7 +125,7 @@ export const InvitationDashboard: React.FC<InvitationDashboardProps> = ({ data }
               </div>
               {data.phone && (
                 <div style={styles.detailItem}>
-                  <span style={styles.detailLabel}>SECURE PHONE NODE (SĐT)</span>
+                  <span style={styles.detailLabel}>SĐT</span>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <span style={styles.detailVal}>{data.phone}</span>
                     <button
@@ -155,12 +155,12 @@ export const InvitationDashboard: React.FC<InvitationDashboardProps> = ({ data }
               )}
               {data.facebook && (
                 <div style={styles.detailItem}>
-                  <span style={styles.detailLabel}>SOCIAL UPLINK (FACEBOOK)</span>
+                  <span style={styles.detailLabel}>FACEBOOK</span>
                   <span style={styles.detailVal}>
-                    <a 
-                      href={`https://${data.facebook}`} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={`https://${data.facebook}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="glow-text-cyan"
                       style={{ textDecoration: "underline" }}
                     >
@@ -244,7 +244,7 @@ export const InvitationDashboard: React.FC<InvitationDashboardProps> = ({ data }
             <div style={styles.scheduleItem}>
               <MapPin size={18} color="var(--matrix-green)" />
               <div>
-                <span style={styles.scheduleLabel}>SERVER LOCATION (ĐỊA ĐIỂM)</span>
+                <span style={styles.scheduleLabel}>LOCATION (ĐỊA ĐIỂM)</span>
                 <p style={styles.scheduleVal}>{data.location}</p>
                 <span style={styles.addressText}>{data.locationAddress}</span>
               </div>
@@ -253,7 +253,7 @@ export const InvitationDashboard: React.FC<InvitationDashboardProps> = ({ data }
             <div style={styles.mapMeta}>
               <Compass size={14} style={{ marginRight: "6px" }} />
               <span>COORDS: {data.locationCoords.lat}° N, {data.locationCoords.lng}° E</span>
-              <a 
+              <a
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.location + " " + data.locationAddress)}`}
                 target="_blank"
                 rel="noopener noreferrer"
